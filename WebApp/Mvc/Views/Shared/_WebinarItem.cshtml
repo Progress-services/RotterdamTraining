@@ -1,0 +1,13 @@
+﻿@model SitefinityWebApp.Mvc.ViewModels.WebinarViewModel
+
+<h5><a href="Article.html">@Model.Title</a></h5>
+
+<div class="media Author--small">
+    <a class="pull-left" href="Author.html">
+    </a>
+
+    <div class="media-body">
+        <h6 class="media-heading"><a href="Author.html">@Model.Description</a></h6>
+        <span class="date-created">@Model.StartTime.ToLongDateString()</span>
+    </div>
+</div>

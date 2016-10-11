@@ -20,7 +20,9 @@
         </div>
     </div>
     <div class="Main-content section">
-        @Html.SfPlaceHolder("MainSections")
+        @Html.SfPlaceHolder("MainSections")        
+    </div>
+    <footer>
         <section class="section">
             <div class="container">
                 <h4 class="text-center">Follow us</h4>
@@ -40,7 +42,7 @@
                 </ul>
             </div>
         </section>
-    </div>
+    </footer>
     @Html.Section("bottom")
     @if (!SystemManager.IsDesignMode || SystemManager.IsPreviewMode)
     {
