@@ -886,6 +886,8 @@
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-8+4.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-9+3.html" />
     <Content Include="ResourcePackages\Bootstrap\gruntfile.js" />
+    <Content Include="ResourcePackages\DevMagazine\GridSystem\Templates\section-gray.html" />
+    <Content Include="ResourcePackages\Pure\GridSystem\Templates\pure-3-columns.html" />
     <Content Include="Silverlight.js" />
     <Content Include="Sitefinity\Default.aspx" />
     <Content Include="Sitefinity\Public\Services\Thunder\ThunderService.svc" />
