@@ -1,0 +1,20 @@
+@model Telerik.Sitefinity.Frontend.Mvc.Models.ContentListViewModel
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+
+<h4>Featured News</h4>
+<div class="row">
+    @foreach (var newsItem in Model.Items)
+    {
+        var navigateUrl = HyperLinkHelpers.GetDetailPageUrl(newsItem, ViewBag.DetailsPageId, ViewBag.OpenInSamePage, Model.UrlKeyPrefix);
+
+        <div class="col-md-6">
+
+            <h2><a href="@navigateUrl">@newsItem.Fields.Title</a></h2>
+            <p>
+                @newsItem.Fields.Summary
+            </p>
+            <p><a href="Issue.html">#@(newsItem.Fields.UrlName).html</a></p>
+        </div>
+    }
+</div>

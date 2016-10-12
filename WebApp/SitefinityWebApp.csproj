@@ -1012,8 +1012,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="wlwmanifest.xml" />
-    <Content Include="Mvc\Views\readme.txt" />
-    <Content Include="Mvc\Views\Shared\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\RadSpell\de-DE.tdf" />
@@ -1187,6 +1185,9 @@
     <Content Include="Mvc\Views\Adder\Index.cshtml" />
     <Content Include="Mvc\Views\Webinars\Index.cshtml" />
     <Content Include="Mvc\Views\Shared\_WebinarItem.cshtml" />
+    <Content Include="ResourcePackages\DevMagazine\MVC\Views\News\Detail.DetailPage.cshtml" />
+    <Content Include="ResourcePackages\DevMagazine\MVC\Views\News\List.NewsList.cshtml" />
+    <Content Include="ResourcePackages\DevMagazine\MVC\Views\Authors\List.Authors.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="OpenAccessNuget.targets" />

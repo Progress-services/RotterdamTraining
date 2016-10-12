@@ -1,0 +1,21 @@
+﻿@model Telerik.Sitefinity.Frontend.DynamicContent.Mvc.Models.DynamicContentListViewModel
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+<h2>Authors</h2>
+<div class="row">
+    @foreach (var item in Model.Items)
+    {
+        var navigateUrl = HyperLinkHelpers.GetDetailPageUrl(item, ViewBag.DetailsPageId, ViewBag.OpenInSamePage, Model.UrlKeyPrefix);
+
+        <div class="col-md-2">
+            <div class="text-center">
+                <a href="@navigateUrl">
+                    <img class="img-circle" src="@item.Fields.Avatar.Fields.MediaUrl" height="128" width="128" alt="@item.Fields.Avatar.Fields.AlternativeText">
+                </a>
+
+                <h3><a href="@navigateUrl">@item.Fields.Name</a></h3>
+                <p>@item.Fields.JobTitle</p>
+            </div>
+        </div>
+    }
+</div>
