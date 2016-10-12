@@ -1,6 +1,4 @@
-﻿@model SitefinityWebApp.Mvc.Models.WebinarModel
+﻿@model SitefinityWebApp.Mvc.ViewModels.WebinarViewModel
 
 <h6 style="color:#808080">Upcoming Webinars</h6>
-@Html.Partial("_WebinarItem", Model.FirstWebinar)
-<br>
-@Html.Partial("_WebinarItem", Model.SecondWebinar)
+@Html.Partial("_WebinarItem", Model)

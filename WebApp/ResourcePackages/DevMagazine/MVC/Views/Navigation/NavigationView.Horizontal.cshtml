@@ -23,7 +23,18 @@
                 @foreach (CustomNodeViewModel node in Model.Nodes)
                 {
                     <li class="@GetClass(node)">
-                        @Html.Partial("_NodeLink", node)
+                        <a href="@node.Url" target="@node.LinkTarget">
+                            @if (node.Rating > 0)
+                            {
+                                <small>
+                                    @for (int i = 0; i < node.Rating; i++)
+                                    {
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    }
+                                </small>
+                            }
+                            @node.Title
+                        </a>
                     </li>
                 }
             </ul>

@@ -13,6 +13,8 @@ namespace SitefinityWebApp.Mvc.Controllers
     {
         public string BreakingNewsMessage { get; set; }
 
+        public object SelectedNewsItem { get; set; }
+
         // GET: BreakingNews
         public ActionResult Index()
         {
