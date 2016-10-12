@@ -1,0 +1,47 @@
+@model Telerik.Sitefinity.Frontend.Navigation.Mvc.Models.INavigationModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Navigation.Mvc.Models;
+@using Telerik.Sitefinity.Modules.Pages;
+@using SitefinityWebApp.Mvc.ViewModels;
+
+<nav class="navbar navbar-default" role="navigation">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                @foreach (CustomNodeViewModel node in Model.Nodes)
+                {
+                    <li class="@GetClass(node)">
+                        @Html.Partial("_NodeLink", node)
+                    </li>
+                }
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+@*Resolves the class that will be added for each node depending whether it is selected*@
+@helper GetClass(NodeViewModel node)
+{
+
+if (node.IsCurrentlyOpened)
+{
+        @Html.Raw("active");
+    }
+    else if (node.HasChildOpen)
+    {
+        @Html.Raw("active");
+    }
+}
