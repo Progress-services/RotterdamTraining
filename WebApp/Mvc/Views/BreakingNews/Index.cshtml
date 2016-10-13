@@ -1,7 +1,7 @@
 ﻿@model SitefinityWebApp.Mvc.Models.BreakingNewsModel
 
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
 <marquee>
-
-    @Html.Raw(Model.Message)
-
+    @Html.Resource("StaticMessage")
 </marquee>

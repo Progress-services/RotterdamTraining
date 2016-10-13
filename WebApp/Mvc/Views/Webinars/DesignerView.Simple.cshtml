@@ -1,0 +1,19 @@
+﻿@*<div ng-repeat="(key, webinar) in webinarItems" class="row">
+    <div class="col-xs-12">
+        <h3>Webinar #{{key}}</h3>
+
+        <label for="input-{{key}}">Title</label>
+        <input name="input-{{key}}" ng-model="webinar.Title" />
+        <br/>
+        <label for="input-{{key}}">Description</label>
+        <textarea name="input-{{key}}" ng-model="webinar.Description" />
+        <br />
+        <label for="input-{{key}}">Start Date {{webinar.StartDate}}</label>
+        <input name="input-{{key}}" ng-model="webinar.StartDate" type="date" />
+        <br />
+        <label for="input-{{key}}">End Date</label>
+        <input name="input-{{key}}" ng-model="webinar.EndDate" type="date" />
+    </div>
+</div>*@
+
+<sf-list-selector sf-dynamic-items-selector sf-item-type="'Telerik.Sitefinity.DynamicTypes.Model.Webinars.Webinar'" sf-master="true" sf-selected-item="selectedItem" />

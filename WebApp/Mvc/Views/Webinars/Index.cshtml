@@ -1,4 +1,19 @@
-﻿@model SitefinityWebApp.Mvc.ViewModels.WebinarViewModel
+﻿@model IEnumerable<SitefinityWebApp.Mvc.ViewModels.WebinarViewModel>
 
-<h6 style="color:#808080">Upcoming Webinars</h6>
-@Html.Partial("_WebinarItem", Model)
+<h2>Upcoming Webinars</h2>
+
+@foreach (var item in Model)
+{
+    <h5><a href="Article.html">@item.Title</a></h5>
+
+    <div class="media Author--small">
+        <a class="pull-left" href="Author.html">
+        </a>
+
+        <div class="media-body">
+            <h6 class="media-heading"><a href="Author.html">@item.Description</a></h6>
+            <span class="date-created">@item.StartDate.ToLongDateString()</span>
+        </div>
+    </div>
+}
+

@@ -9,20 +9,22 @@ namespace SitefinityWebApp.Mvc.Controllers
     [ControllerToolboxItem(Title = "Webinars Widget", Name = "WebinarsWidget", SectionName = "CustomMvcWidgets")]
     public class WebinarsController : Controller
     {
-        private WebinarViewModel model;
+        private WebinarModel model;
 
         [TypeConverter(typeof(ExpandableObjectConverter))]
-        public WebinarViewModel Model
+        public WebinarModel Model
         {
             get
             {
-                return this.model ?? (this.model = new WebinarViewModel());
+                return this.model ?? (this.model = new WebinarModel());
             }
         }
 
+        public string SelectedItem { get; set; }
+
         public ActionResult Index()
         {
-            return View("Index", Model);
+            return View("Index", this.Model.Webinars);
         }
 
         protected override void HandleUnknownAction(string actionName)

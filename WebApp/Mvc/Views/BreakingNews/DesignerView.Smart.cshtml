@@ -1,1 +1,2 @@
 ﻿<sf-list-selector sf-news-selector sf-selected-item="selectedItem" sf-select-button-text="Select breaking news..." sf-change-button-text="Change breaking news..." />
+<select ng-options="item.Title for item in newsItems" ng-model="selectedItem"></select>
